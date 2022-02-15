@@ -1,0 +1,275 @@
+    $min-font-color: #20232A;
+	$desc-font-color: #818693;
+	.order_content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: 160rpx;
+		box-sizing: border-box;
+		.restaurant_info_box{
+			position: relative;
+			color: $min-font-color;
+			width: 100%;
+			height: 160rpx;
+			background: linear-gradient(90deg, #E94E3C, #E9793C);
+			.restaurant_info{
+				position: absolute;
+				z-index: 9;
+				left: 30rpx;
+				// transform: translateX(-50%);
+				display: flex;
+				width: calc(100% - 60rpx);
+				// margin:0 auto;
+				background: rgba(255,255,255,0.97);
+				box-shadow: 0px 2px 5px 0px rgba(69,69,69,0.10); 
+				border-radius: 8px;
+				padding: 40rpx;
+				box-sizing: border-box;
+				.left_info{
+					flex: 1;
+					.title{
+						font-size: 36rpx;
+						color: $min-font-color;
+					}
+					.position{
+						color: $desc-font-color;
+						font-size: 36rpx;
+					}
+				}
+				.restaurant_logo{
+					.restaurant_logo_img{
+						display: block;
+						width: 120rpx;
+						height: 120rpx;
+						border-radius: 16rpx;
+					}
+				}
+			}
+		}
+	    .order_list_cont{
+			height: calc(100vh - 320rpx);
+			width: 100%;
+			.order_list{
+				background-color: #fff;
+				width: 100%;
+				height: 100%;
+				padding-top: 80rpx;
+				box-sizing: border-box;
+				position: relative;
+				.type_item{
+					display: flex;
+					margin-bottom: 40rpx;
+					.dish_img{
+						width: 128rpx;
+						margin: 0 30rpx;
+						.dish_img_url{
+							display: block;
+							width: 128rpx;
+							height: 128rpx;
+							border-radius: 8rpx;
+						}
+					}
+					.dish_info{
+						position: relative;
+						flex: 1;
+						padding-bottom: 40rpx;
+						border-bottom:solid 1px #ebeef5;
+						.dish_name{
+							font-size: 32rpx;
+							font-weight: bold;
+							color: #20232a;
+						}
+						
+						.dish_price{
+							font-size: 36rpx;
+							color: #818693;
+							font-weight: bold;
+							.ico{
+								font-size: 24rpx;
+							}
+							.dish_number{
+								padding: 0 10rpx;
+								line-height: 72rpx;
+								font-size: 30rpx;
+							}
+						}
+						.dish_active{
+							position: absolute;
+							right: 20rpx;
+							bottom: 20rpx;
+							display: flex;
+							font-size: 36rpx;
+							color: #E94E3C;
+							font-weight: bold;
+							.ico{
+								line-height: 66rpx;
+								font-size: 24rpx;
+							}
+						}
+					}
+				}
+			    &::before{
+					content: '';
+					position: absolute;
+					width: 100vw;
+					height: 120rpx;
+					z-index: 99;
+					background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0));
+					bottom: 0px;
+					left: 0px;
+				}
+				.seize_seat{
+			    	width: 100%;
+			    	height: 98rpx;
+			    }
+			}
+		}
+		.footer_order_buttom{
+			position: fixed;
+			display: flex;
+			bottom: 48rpx;
+			width: calc(100% - 60rpx);
+			height: 88rpx;
+			margin: 0 auto;
+			background: rgba(0,0,0,0.90);
+			border-radius: 25px;
+			box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25); 
+			z-index: 999;
+			padding: 0rpx 10rpx;
+			box-sizing: border-box;
+			.order_number{
+				position: relative;
+				width: 120rpx;
+				.order_number_icon{
+					position: absolute;
+					display: block;
+					width: 120rpx;
+					height: 118rpx;
+					left: 12rpx;
+					bottom: 0px;
+				}
+				.order_dish_num{
+					position: absolute;
+					display: block;
+					z-index: 9;
+					width: 36rpx;
+					height: 36rpx;
+					line-height: 32rpx;
+					right: -18rpx;
+					font-size: 24rpx;
+					top: 22rpx;
+					text-align: center;
+					border-radius: 36px;
+					background-color: #f00;
+					color: #fff;
+				}
+			}
+			.order_price{
+				flex: 1;
+				text-align: left;
+				color: #fff;
+				line-height: 88rpx;
+				padding-left: 34rpx;
+				box-sizing: border-box;
+				font-size: 36rpx;
+				font-weight: bold;
+				.ico{
+					font-size: 24rpx;
+				}
+			}
+			.order_but{
+				background-color: #d8d8d8;
+				width: 264rpx;
+				height: 72rpx;
+				line-height: 72rpx;
+				border-radius: 72rpx;
+				text-align: center;
+				margin-top: 10rpx;
+				display: flex;
+				.order_but_left{
+					flex: 1;
+					background-color: #473d26;
+					color: #ffb302;
+					border-radius: 72rpx 0 0 72rpx;
+				}
+				.order_but_rit{
+					flex: 1;
+					color: #20232a;
+					border-radius: 72rpx 72rpx 72rpx 72rpx;
+					background: linear-gradient(144deg,#ffda05 18%, #ffb302 80%);
+				}
+			}
+		}
+		.pop_mask{
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			background-color: rgba($color: #000000, $alpha: 0.4);
+			.pop{
+				width: calc(100% - 160rpx);
+				position: relative;
+				top: 40%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				background: #fff;
+				border-radius: 20rpx;
+				.open_table_cont{
+					padding-top: 60rpx;
+					position: relative;
+					.cont_icon{
+						position: relative;
+						height: 164rpx;
+						.cont_icon_img{
+							position: absolute;
+							left: 50%;
+							transform: translateX(-50%);
+							bottom:0px;
+							width: 360rpx;
+							height: 360rpx;
+						}
+					}
+					.cont_tit{
+						font-size: 48rpx;
+						color: #20232a;
+						text-align: center;
+					}
+					.cont_desc{
+						font-size: 32rpx;
+						color: #818693;
+						text-align: center;
+						padding-bottom: 40rpx;
+					}
+				}
+				.butList{
+					background: #f7f7f7;
+					display: flex;
+					text-align: center;
+					border-radius: 20rpx;
+					.define{
+						flex: 1;
+						font-size: 36rpx;
+						line-height: 100rpx;
+					}
+					.cancel{
+						flex: 1;
+						font-size: 36rpx;
+						line-height: 100rpx;
+					}
+				}
+			}
+			.close{
+				position: absolute;
+				bottom: -180rpx;
+				left: 50%;
+				transform: translateX(-50%);
+				.close_img{
+					width: 88rpx;
+					height: 88rpx;
+				}
+			}
+		}
+	}

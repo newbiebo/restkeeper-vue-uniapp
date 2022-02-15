@@ -1,0 +1,36 @@
+.navBar{
+		position: fixed;
+		display: flex;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		height: 160rpx;
+		width: 100vw;
+		padding-top: var(--status-bar-height);
+		padding-left: 30rpx;
+		box-sizing: border-box;
+		background: linear-gradient(90deg, #E94E3C, #E9793C);
+		/* #ifdef H5 */
+		padding-top: 20rpx;
+		/* #endif */
+		.leftNav{
+			position: relative;
+			.back{
+				position: relative;
+				top: -6rpx;
+				width: 88rpx;
+				height: 88rpx;
+			}
+		}
+		.centerNav{
+			width: calc(100vw - 326rpx);
+			text-align: center;
+			line-height: 78rpx;
+			font-size: 36rpx;
+			color: #fff;
+		}
+		.logo {
+			height: 66rpx;
+			width: 184rpx;
+		}
+	}
